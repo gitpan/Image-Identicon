@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-JP">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" type="text/css" href="/style/style.css" />
+  <title>Identicon Sample</title>
+</head>
+<body>
+
+<h1>Identicon Sample</h1>
+
+<form action="index.cgi" method="POST">
+IP address: <input type="text" name="addr" value="<&ADDR>" /><br />
+<input type="submit" value="Identicon!" />
+<span style="padding-left: 0.5em; padding-right: 0.5em;">-</span>
+<input type="submit" name="random" value="random" />
+</form>
+
+<!begin:image>
+<img src="identicon.cgi?ar=<&ADDR>&scale=10" />
+<!end:image>
+
+<h2>See Also</h2>
+<ul>
+<li><a href="http://www.docuverse.com/blog/donpark/2007/01/18/visual-security-9-block-ip-identification">Visual Security: 9-block IP Identification</a></li>
+<li><a href="http://www.radiumsoftware.com/index.html#3f266555f5ba52b08a7d0c6d0c2d373a">Identicon (Radium Software)</a></li>
+</ul>
+
+<h2>Sources</h2>
+<ul>
+<li><a href="lib/Image/Identicon.pm">lib/Image/Identicon.pm</a></li>
+<li><a href="index.cgi">index.cgi</a></li>
+<li><a href="index.tmpl.html">index.tmpl.html</a></li>
+<li><a href="identicon.cgi">identicon.cgi</a></li>
+</ul>
+
+<hr />
+<div style="padding-left:40px">
+山科 氷魚 (YAMASHINA Hio/やましな ひお)
+&lt;<a href="mailto:hio@hio.jp">hio@hio.jp</a>&gt;
+</div>
+
+</body>
+</html>

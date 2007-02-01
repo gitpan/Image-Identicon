@@ -1,0 +1,16 @@
+Changes
+MANIFEST
+Makefile.PL
+README
+SIGNATURE
+example/identicon.cgi
+example/index.cgi
+example/index.tmpl.html
+inc/ExtUtils/MY_Metafile.pm
+lib/Image/Identicon.pm
+t/00-load.t
+t/97_podspell.t
+t/boilerplate.t
+t/pod-coverage.t
+t/pod.t
+META.yml                                 Module meta-data (added by MakeMaker)
