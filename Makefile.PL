@@ -4,7 +4,7 @@ use ExtUtils::MakeMaker;
 use inc::ExtUtils::MY_Metafile qw(my_metafile);
 
 my $requires = {
-	'GD' => 0,
+	'GD' => '2.05',
 	'Digest::SHA' => 0,
 };
 my $build_requires = {
@@ -13,7 +13,7 @@ my $build_requires = {
 my_metafile 'Image::Identicon' => {
 	requires => $requires,
 	build_requires => $build_requires,
-	license => 'GPL2',
+	license => 'Perl',
 };
 
 WriteMakefile(

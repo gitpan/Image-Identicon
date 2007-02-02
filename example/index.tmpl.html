@@ -5,6 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="next" href="index.cgi?random=1&x=<&RAND>" />
   <link rel="stylesheet" type="text/css" href="/style/style.css" />
   <title>Identicon Sample</title>
 </head>
@@ -20,8 +21,15 @@ IP address: <input type="text" name="addr" value="<&ADDR>" /><br />
 </form>
 
 <!begin:image>
-<img src="identicon.cgi?ar=<&ADDR>&scale=10" />
+<p>
+<img src="identicon.cgi?ar=<&ADDR>&scale=4" />
+<&ADDR>
+[<a href="http://clair.hio.jp/~hio/identicon/index.cgi?ar=<&ADDR>">URL</a>]
+</p>
 <!end:image>
+<p>
+<a href="samples.html">Many Samples</a>
+</p>
 
 <h2>See Also</h2>
 <ul>
@@ -31,11 +39,21 @@ IP address: <input type="text" name="addr" value="<&ADDR>" /><br />
 
 <h2>Sources</h2>
 <ul>
-<li><a href="lib/Image/Identicon.pm">lib/Image/Identicon.pm</a></li>
-<li><a href="index.cgi">index.cgi</a></li>
-<li><a href="index.tmpl.html">index.tmpl.html</a></li>
-<li><a href="identicon.cgi">identicon.cgi</a></li>
+<li>CPAN, <a href="http://search.cpan.org/dist/Image-Identicon/lib/Image/Identicon.pm">Image::Identicon</a>, (<a href="image-identicon-podspell.patch">patch for sarge</a>)</li>
+<li>
+  this site
+  <ul>
+  <li><a href="lib/Image/Identicon.pm">lib/Image/Identicon.pm</a> (<a href="lib/Image/Identicon.html">doc</a>)</li>
+  <li><a href="index.txt">index.cgi</a></li>
+  <li><a href="index.tmpl.txt">index.tmpl.html</a></li>
+  <li><a href="identicon.txt">identicon.cgi</a></li>
+	</ul>
+</li>
 </ul>
+
+<p>
+<img src="patch_list.png" />
+</p>
 
 <hr />
 <div style="padding-left:40px">
@@ -45,3 +63,4 @@ IP address: <input type="text" name="addr" value="<&ADDR>" /><br />
 
 </body>
 </html>
+<!-- $Id$ -->

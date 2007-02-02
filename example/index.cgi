@@ -1,4 +1,13 @@
 #! /usr/bin/perl -w
+## ----------------------------------------------------------------------------
+#  Image::Identicon/example/index.cgi.
+# -----------------------------------------------------------------------------
+# Mastering programmed by YAMASHINA Hio
+#
+# Copyright 2007 YAMASHINA Hio
+# -----------------------------------------------------------------------------
+# $Id: /perl/Image-Identicon/example/index.cgi 337 2007-02-02T12:31:38.414450Z hio  $
+# -----------------------------------------------------------------------------
 use strict;
 use warnings;
 use CGI qw(escapeHTML);
@@ -39,6 +48,8 @@ sub do_work
 		$tmpl =~ s{<!begin:image>.*<!end:image>\r?\n}{}sg;
 		$tmpl =~ s{<&ADDR>}{}g;
 	}
+	$tmpl =~ s{<&RAND>}{int(rand 0xFFFF)}ge;
+	
 	print "Content-Type: text/html; charset=utf-8\r\n\r\n";
 	print $tmpl;
 }
@@ -54,3 +65,23 @@ sub is_valid_address
 # -----------------------------------------------------------------------------
 # End of File.
 # -----------------------------------------------------------------------------
+
+=encoding utf8
+
+=for stopwords
+	YAMASHINA
+	Hio
+	ACKNOWLEDGEMENTS
+	AnnoCPAN
+	CPAN
+	RT
+	identicon
+
+=head1 NAME
+
+index.cgi - identicon sample cgi
+
+=head1 SEE ALSO
+
+L<Image::Identicon>
+

@@ -14,25 +14,29 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 c8bb7a0d500ae129f29162b2880a9f4f657ad7cb Changes
-SHA1 124b458fcedefdd37a83c8506595a522c12d3498 MANIFEST
-SHA1 d3a95e1c666299b90e0de2548ebb82a831c09808 META.yml
-SHA1 23638e8f0e1b337c01ede4416af5fe1d20d0b18b Makefile.PL
-SHA1 1dd144fbe445f2b7ea136c1b080b7f223911c201 README
-SHA1 99df5ec62b07c9e9fd993dda830df823fef20d52 example/identicon.cgi
-SHA1 2fd1c2f7c81eb1524e36de959a0de08b02daf359 example/index.cgi
-SHA1 c7ae6d585f591c43ad4327d9726b7d4ea22071f3 example/index.tmpl.html
+SHA1 90f8e8ac701d9d6e51c9c219eebbde1ed12d5c76 Changes
+SHA1 9a9135f858fe88ffd0d9c2227ce5ab0a25e2d488 MANIFEST
+SHA1 cee76dbdbb0e423a67dd2d1f762989022fbd26cf META.yml
+SHA1 6f02a5af5829b8b83d9d2eb79721b15b890bff08 Makefile.PL
+SHA1 75a96ffba1fa7d42ad6707f4d3a06b3a544ca5dd README
+SHA1 28d33487fd5b567b15f86f12428b9db848b631c1 example/identicon.cgi
+SHA1 e9bfec9d9b1b20b4971ba8d0639f35a3cbac1194 example/index.cgi
+SHA1 aebf2c08abd574edb32644971f56da6e419b86a3 example/index.tmpl.html
+SHA1 467fc9d66d116d4fda7f0383d1eba34ba6bf7803 example/patch_list.pl
+SHA1 d9eb80a34effce28f64210d2a009106904346584 example/patch_list.png
 SHA1 3aca1cdbbdc13088fd636531f0d885560b64cd61 inc/ExtUtils/MY_Metafile.pm
-SHA1 9ef9461e09b8c36f302b3bab558c72b7f41ad45b lib/Image/Identicon.pm
+SHA1 67bcbe714ea57e4b32bfa3067993017b94ea84fe lib/Image/Identicon.mlpod
+SHA1 2116c2ccd0d4e408fb9e1f17e62a1775ff87b5dc lib/Image/Identicon.pm
+SHA1 d87dad0c5f40ff26cbb48e543676fe4674f97e76 lib/Image/Identicon_ja.pod
 SHA1 9092f6bc679eced68c11fea7d8ef58205ed6e9d0 t/00-load.t
-SHA1 2d71bf43586b58db95f5cd0c930443cff5b6eb8b t/97_podspell.t
+SHA1 a2d192aa89625493d7cb3e4638a1370b6bf8f2d5 t/01-run.t
 SHA1 19dc0a674f7699da7aaec507112ed91d23173e7a t/boilerplate.t
 SHA1 6da39b48ce64b584e4c3274bff96fc76ff484820 t/pod-coverage.t
 SHA1 0190346d7072d458c8a10a45c19f86db641dcc48 t/pod.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFFwZaYewjCT38k4dkRAr9ZAJ9ZikmJbNyrTN8asV9/ZCNDygB4xACgg0Pw
-spioUQhIJqMI9U+905r97EM=
-=hPDp
+iD8DBQFFwzXFewjCT38k4dkRAqoMAJ9iFOEIgegcc1CGmzokXDlierxjFgCfSUoQ
+Sa1dIvWAF+erMnOjBytqec4=
+=dYY3
 -----END PGP SIGNATURE-----
