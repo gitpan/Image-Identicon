@@ -14,12 +14,11 @@
 
 =head1 NAME
 
-Image::Identicon - Generate Identicon image
-
+Image::Identicon_ja - Identicon イメージの生成
 
 =head1 バージョン
 
-Version 0.02
+Version 0.03
 
 
 =head1 概要
@@ -34,205 +33,55 @@ Version 0.02
 
 =head1 エクスポート
 
-no functions exported.
-
+エクスポートされる関数はありません.
 
 =head1 メソッド
 
 =head2 $pkg->new({ salt=>$salt })
 
-Create generator.
-
-
-=head2 $identicon->render(\%opts)
-
- $opts->{size} - image size
- $opts->{code} - 32bit integer code
-
-Render Image.
-Returns hashref.
-$result->{image} will be GD::Image instance.
-
-
-=head2 $identicon->identicon_code()
-
-calculate 32bit Identicon code from IP address.
-
-
-=head2 $identicon->decode($code)
-
-decode patch information from 32bit integer.
-
-
-=head1 DEPENDENCY
-
-This module uses L<GD> and L<Digest::SHA>.
-
-
-=head1 著者
-
-YAMASHINA Hio, C<< <hio at cpan.org> >>
-
-
-=head1 バグ
-
-Please report any bugs or feature requests to
-C<bug-image-identicon at rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Image-Identicon>.
-I will be notified, and then you'll automatically be notified of progress on
-your bug as I make changes.
-
-
-=head1 サポート
-
-You can find documentation for this module with the perldoc command.
-
-
-    perldoc Image::Identicon
-
-You can also look for information at:
-
-
-=over 4
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Image-Identicon>
-
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Image-Identicon>
-
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Image-Identicon>
-
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/Image-Identicon>
-
-
-=back
-
-=head1 例
-
-http://clair.hio.jp/~hio/identicon/ 
-
-
-=head1 謝辞
-
-Don Park originally implements identicon.
-
-
-http://www.docuverse.com/blog/donpark/2007/01/18/visual-security-9-block-ip-identification
-
-
-=head1 著作権及びライセンス
-
-Copyright 2007 YAMASHINA Hio, all rights reserved.
-
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
-
-
-=encoding utf8
-
-=for stopwords
-  YAMASHINA
-  Hio
-  ACKNOWLEDGEMENTS
-  AnnoCPAN
-  CPAN
-  RT
-  GPL2
-  Identicon
-  identicon
-  IP
-
-=head1 名前
-
-Image::Identicon - Generate Identicon image
-
-
-=head1 バージョン
-
-Version 0.02
-
-
-=head1 概要
-
-  use Image::Identicon;
-  my $identicon = Image::Identicon->new(salt=>$salt);
-  my $image = $identicon->render(); # or pass 32bit integer.
-  
-  binmode(*STDOUT);
-  print "Content-Type: image/png\r\n\r\n";
-  print $image->{image}->png;
-
-=head1 エクスポート
-
-no functions exported.
-
-
-=head1 メソッド
-
-=head2 $pkg->new({ salt=>$salt })
-
-Create identicon generator.
-
+identicon を生成するためのオブジェクトを生成.
 
 =head2 $identicon->render(\%opts)
 
  $opts->{size} - image size (width and height)
  $opts->{code} - 32bit integer code
 
-Create an identicon image.
-Returns hashref.
-$result->{image} will be GD::Image instance.
-
+identicon イメージの生成. 
+ハッシュリファレンスを返します. 
+$result->{image} に GD::Image インスタンスが返されます.
 
 =head2 $identicon->identicon_code()
 
-calculate 32bit Identicon code from IP address.
-
+IP アドレスから 32bit identicon コードを算出します.
 
 =head2 $identicon->decode($code)
 
-decode patch information from 32bit integer.
+32bit identicon コードから必要な情報を展開します.
 
+=head1 依存
 
-=head1 DEPENDENCY
-
-This module uses L<GD> and L<Digest::SHA>.
-
+L<GD> と L<Digest::SHA> を利用しています.
 
 =head1 著者
 
-YAMASHINA Hio, C<< <hio at cpan.org> >>
-
+山科 氷魚 (YAMASHINA Hio), C<< <hio at cpan.org> >>
 
 =head1 バグ
 
-Please report any bugs or feature requests to
-C<bug-image-identicon at rt.cpan.org>, or through the web interface at
+バグや要望は C<bug-image-identicon at rt.cpan.org> 宛に
+報告してください. 若しくは
 L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Image-Identicon>.
-I will be notified, and then you'll automatically be notified of progress on
-your bug as I make changes.
-
+にある web インターフェースからでもかまいません.
+そこから私に通知され, そして私が変更を行うことで報告頂いたバグの進捗を
+自動的にあなたに伝えるでしょう.
 
 =head1 サポート
 
-You can find documentation for this module with the perldoc command.
-
+このモジュールのドキュメントは perldoc コマンドで見ることが出来ます.
 
     perldoc Image::Identicon
 
-You can also look for information at:
-
+また, 以下の場所でも見ることが出来ます:
 
 =over 4
 
@@ -265,8 +114,7 @@ http://clair.hio.jp/~hio/identicon/
 
 =head1 謝辞
 
-Don Park originally implements identicon.
-
+identicon のオリジナルの実装は Don Park によります. 感謝.
 
 http://www.docuverse.com/blog/donpark/2007/01/18/visual-security-9-block-ip-identification
 
@@ -276,7 +124,6 @@ http://www.docuverse.com/blog/donpark/2007/01/18/visual-security-9-block-ip-iden
 Copyright 2007 YAMASHINA Hio, all rights reserved.
 
 
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
-
+このプログラムはフリーソフトウェアです。あなたは Perl と同じ
+ライセンスの 元で再配布及び変更を行うことが出来ます.
 

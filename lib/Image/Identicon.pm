@@ -5,7 +5,7 @@
 #
 # Copyright 2007 YAMASHINA Hio
 # -----------------------------------------------------------------------------
-# $Id: /perl/Image-Identicon/lib/Image/Identicon.pm 342 2007-02-02T12:59:29.803814Z hio  $
+# $Id: /perl/Image-Identicon/lib/Image/Identicon.pm 344 2007-02-02T16:41:20.275333Z hio  $
 # -----------------------------------------------------------------------------
 package Image::Identicon;
 
@@ -20,7 +20,7 @@ BEGIN{
 }
 use Digest::SHA qw(sha1);
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 our $SCALE_LIMIT = 100;
 our $SIZE_LIMIT = 300;
@@ -403,6 +403,7 @@ sub _resize
 		my $orig = $image;
 		my $image = GD::Image->new($size, $size, 1);
 		$image->copyResampled($orig, 0, 0, 0, 0, $size, $size, $orig->width, $orig->height);
+		$image->transparent($r->{back_color});
 		if( $DEBUG )
 		{
 			my $ox = $orig->width;
@@ -444,7 +445,7 @@ Image::Identicon - Generate Identicon image
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 
 =head1 SYNOPSIS
